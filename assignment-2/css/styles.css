@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+}
+nav {
+  background: #4f729a;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+    padding: 1px;
+  display: inline-block;
+}
+nav a:hover {
+  background: #2c31c2;
+}
+section {
+  padding: 20px;
+}
+img {
+  width: 150px;
+}
+
