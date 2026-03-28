@@ -56,17 +56,16 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
+  <h2>Contact</h2>
 
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit" onclick="changeColor()">Send</button>
-    </form>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 
-  </section>
-
+</section>
   <script src="js/script.js"></script>
 
 </body>
