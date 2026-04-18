@@ -178,12 +178,50 @@ body.dark textarea {
   font-size: 14px;
   font-weight: bold;
 }
+
+.extra {
+  margin-top: 20px;
+}
+
+.mini-card {
+  background: #f8f0fa;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.mini-card h4 {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.mini-card p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.mini-card button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #F0B7A6;
+  color: #1D1024;
+}
 body.dark #about .desc {
   color: #ccc;
 }
 
 body.dark #about .title {
   color: #F0B7A6;
+}
+body.dark .mini-card {
+  background: #7A3B74;
+}
+
+body.dark .mini-card button {
+  background: #F0B7A6;
+  color: #1D1024;
 }
 
 
