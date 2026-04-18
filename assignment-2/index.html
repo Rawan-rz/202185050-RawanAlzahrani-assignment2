@@ -11,26 +11,20 @@
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-          <h2>Rawan Alzahrani</h2>
-          <p>Web Developer</p>
-
-          <div class="info">
-              <div class="info-box">
-                <p>Email</p>
-                <span>Rawan_Alzahrani@email.com</span>
-              </div>
-
-              <div class="info-box">
-                <p>Phone</p>
-                <span>0503207476</span>
-              </div>
-            </div>
+          
+        <div class="name-box">
+          <input type="text" id="nameInput" placeholder="Enter your name">
+          <p id="welcome"></p>
+          <button onclick="saveName()">Save</button>
+        </div>
 
           <button id="toggleMode">Dark Mode</button>
-          <div class="API-cards">
+        <div class="API-cards">
 
          <div class="mini-card">
             <h4>Weather</h4>
+            <img id="weather-icon" src="" width="40">
+
             <p id="weather-text">Loading...</p>
             <button onclick="getWeather()">Refresh</button>
           </div>
@@ -41,9 +35,23 @@
             <button onclick="getQuote()">New Quote</button>
           </div>
 
-         </div>
-        
-    </div>
+          <div class="mini-card">
+            <h4>Random Image</h4>
+
+            <img id="random-img" src="" width="100%">
+
+            <button onclick="getImage()">New Image</button>
+          </div>
+          <div class="login-box">
+              <p id="status">Not logged in</p>
+
+            <button id="loginBtn" onclick="login()">Login</button>
+            <button id="logoutBtn" onclick="logout()">Logout</button>
+          </div>
+          
+        </div>
+      </div>  
+    
   <!-- Main Content -->
   <main class="main">
 
@@ -90,15 +98,17 @@
           <button onclick="filterProjects('all')">All</button>
           <button onclick="filterProjects('web')">Web</button>
           <button onclick="filterProjects('app')">Apps</button>
-        </div>
+          <button onclick="sortProjects()">Sort by Date</button>
+          <button onclick="toggleProjects(this)">Toggle Projects</button>        </div>
 
 
         <!-- Projects -->
         <div class="grid">
 
         <!-- KFUPM Navigation -->
-        <div class="repo" data-type="web">
+        <div class="repo" data-type="web" data-date="2024-01-10" >
           <h3>KFUPM Navigation System</h3>
+          <img src="assets/navi.png" width="100%">
           <p>
             A web-based navigation system designed to help students and visitors easily find buildings and locations inside KFUPM campus. 
             The system provides an interactive interface and clear directions to improve user experience.
@@ -107,27 +117,37 @@
           </div>
 
           <!-- Hospital SQL -->
-          <div class="repo" data-type="app">
-            <h3>Hospital Management System (SQL)</h3>
+          <div class="repo" data-type="app" data-date="2023-05-20"
+>
+            <h3>Hospital Management System </h3>
+            <img src="assets/Hospital.png" width="100%">
             <p>
             A database system built using SQL to organize hospital data including patients, doctors, and appointments. 
             The project focuses on efficient data storage, retrieval, and management to support daily hospital operations.
             </p>
           
           </div>
+          <div class="repo" data-type="web" data-date="2024-04-01">
 
-          <!-- Portfolio -->
-          <div class="repo" data-type="web">
-            <h3>Personal Portfolio Website</h3>
-            <p>
-            A responsive personal portfolio built using HTML, CSS, and JavaScript to showcase projects, skills, and contact information 
-            with a modern and clean design.
-            </p>
+
+
+            <h3>To-Do List App</h3>
+            <img src="assets/todo.png" width="100%">
+
+            <div class="project-content">
+              <p>
+                A simple task management  that allows users to add, delete, and save tasks using localStorage.
+              </p>
+            </div>
 
           </div>
 
-          <div class="repo" data-type="app">
+          
+
+          <div class="repo" data-type="app" data-date="2024-03-15">
+            
               <h3>Student Planner App</h3>
+              <img src="assets/planer.png" width="100%">
               <p>
                 A simple application that helps students organize assignments and deadlines.
                 It uses localStorage to save data and improve productivity.
@@ -152,7 +172,7 @@
   </main>
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 
 </body>
 </html>
