@@ -7,69 +7,122 @@
 </head>
 
 <body>
-    <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+    <div class="container">
+
+      <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="assets/images/avatar.png" class="avatar">
+      <h2>Rawan Alzahrani</h2>
+       <p>Web Developer</p>
+
+      <div class="info">
+        <p>Email:Rawan_Alzahrani@email.com</p>
+        <p>Phone: 0503207476</p>
+      </div>
+
+      <button id="toggleMode">Dark Mode</button>
+  </div>
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Navbar -->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-    Hello! I am a Computer Science student at KFUPM University. I am interested in web development and enjoy building simple and useful applications.
-   </p>
+    <!-- About Section -->
+    <section id="about">
+       <h2>About Me</h2>
 
-   <p>
-   My goal is to improve my skills and become a professional developer.
-   </p>
-    
-  </section>
-
-  <section id="projects">
-  <h2>Projects</h2>
-
-  <button onclick="toggleProjects()">Show Projects</button>
-
-  <div id="projectsText">
-
-    
-    <ul>
-      <li>
-        <h3>Employee Management System</h3>
-        <img src="https://th.bing.com/th/id/OIP.-x7fsu28XMSOy67ZB5nKfAAAAA?w=168&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="project">
         <p>
-          A system developed in ICS281 course to organize and manage employee data within a company. 
-          It helps in storing, updating, and retrieving employee information efficiently.
+        Hello! I am a Computer Science student at KFUPM University.
         </p>
-      </li>
 
-      <li>
-        <h3>School Website</h3>
-        <img src="https://th.bing.com/th/id/OIP.-x7fsu28XMSOy67ZB5nKfAAAAA?w=168&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="project">
         <p>
-          A website created in ICS202 course using Java to provide information about a school, 
-          including announcements and basic student services.
+        I am interested in web development and enjoy building simple and useful applications.
         </p>
-      </li>
-    </ul>
 
-  </div>
-</section>
+        <p>
+        My goal is to improve my skills and become a professional developer.
+        </p>
+    
+      </section>
+     <!-- What I'm Doing -->
+    <section id="WID">
+      <h2>What I'm Doing</h2>
+      <div class="cards">
+        <div class="card">Web Design</div>
+        <div class="card">Web Development</div>
+        <div class="card">Mobile Apps</div>
+        <div class="card">Photography</div>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-  <h2>Contact</h2>
+    <section id="projects">
+      <h2>Projects</h2>
 
-  <form onsubmit="return validateForm()">
-    <input type="text" id="name" placeholder="Name">
-    <input type="email" id="email" placeholder="Email">
-    <textarea id="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+      <!-- Filters -->
+     <div class="filters">
+       <button onclick="filterProjects('all')">All</button>
+       <button onclick="filterProjects('web')">Web</button>
+       <button onclick="filterProjects('app')">Apps</button>
+     </div>
+      <button onclick="sortProjects()">Sort by Newest</button>
 
-</section>
-  <script src="js/script.js"></script>
+
+     <!-- Projects -->
+      <div class="grid">
+
+     <!-- KFUPM Navigation -->
+     <div class="repo" data-type="web">
+       <h3>KFUPM Navigation System</h3>
+       <p>
+        A web-based navigation system designed to help students and visitors easily find buildings and locations inside KFUPM campus. 
+        The system provides an interactive interface and clear directions to improve user experience.
+       </p>
+      
+      </div>
+
+      <!-- Hospital SQL -->
+      <div class="repo" data-type="app">
+        <h3>Hospital Management System (SQL)</h3>
+        <p>
+        A database system built using SQL to organize hospital data including patients, doctors, and appointments. 
+        The project focuses on efficient data storage, retrieval, and management to support daily hospital operations.
+        </p>
+      
+      </div>
+
+      <!-- Portfolio -->
+       <div class="repo" data-type="web">
+        <h3>Personal Portfolio Website</h3>
+         <p>
+        A responsive personal portfolio built using HTML, CSS, and JavaScript to showcase projects, skills, and contact information 
+        with a modern and clean design.
+         </p>
+      
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+    </section>
+    <p id="timer"></p>
+  </main>
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
